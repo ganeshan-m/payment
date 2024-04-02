@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCS NQT Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+        .payment-details {
+            margin-top: 30px;
+        }
+        .payment-details h2 {
+            margin-bottom: 10px;
+        }
+        .payment-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .payment-details th, .payment-details td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .payment-details th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TCS NQT Payment</h1>
+        <div class="payment-details">
+            <h2>Payment Information</h2>
+            <p>Please find below the details for TCS NQT payment:</p>
+            <table>
+                <tr>
+                    <th>Payment Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>April 1, 2024</td>
+                    <td>100 rs</td>
+                    <td id="text">Unpaid</td>
+                </tr>
+                <!-- Add more payment details here -->
+            </table>
+        </div>
+        <p style="font: bold; font-size: medium;">If payment is done pls click here</p>
+        <button type="submit" onclick="changeText()">Done</button>
+    </div>
+
+    <script>
+        function changeText() {
+            var textElement = document.getElementById('text');
+            textElement.textContent = 'Paid';
+        }
+    </script>
+</body>
+</html>
